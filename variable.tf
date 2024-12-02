@@ -11,11 +11,11 @@ variable "instance_type" {
 }
 
 variable "ami_id" {
-  default = "ami-0c02fb55956c7d316" # Amazon Linux 2 AMI
+  default = "ami-09b0a86a2c84101e1"
 }
 
 variable "key_name" {
   description = "The name of the key pair to use for SSH access"
-  default     = "your-key-pair-name"
+  default     = "project1-key.pem"
 }
 
