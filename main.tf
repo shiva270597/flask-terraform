@@ -80,15 +80,7 @@ resource "aws_instance" "web_server" {
   subnet_id     = aws_subnet.main_subnet.id
   key_name      = var.key_name
 
-  user_data = <<-EOF
-    #!/bin/bash
-    yum update -y
-    yum install -y httpd
-    systemctl start httpd
-    systemctl enable httpd
-    echo '${var.website_content}' > /var/www/html/index.html
-  EOF
-
+  user_data = user_data = "${file("user_data.sh")}"
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
   tags = {
