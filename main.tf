@@ -74,7 +74,7 @@ resource "aws_security_group" "web_sg" {
 }
 
 # Launch an EC2 Instance
-resource "aws_instance" "web_server-2" {
+resource "aws_instance" "web_server2" {
   ami           = var.ami_id
   instance_type = var.instance_type
   subnet_id     = aws_subnet.main_subnet.id
