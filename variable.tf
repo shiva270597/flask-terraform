@@ -16,7 +16,7 @@ variable "ami_id" {
 
 variable "key_name" {
   description = "The name of the key pair to use for SSH access"
-  default     = "project1-key"
+  default     = "project3"
 }
 
 variable "aws_access_key" {
