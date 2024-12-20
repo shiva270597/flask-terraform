@@ -1,25 +1,8 @@
 #!/bin/bash
-
-# Update the system
-sudo apt update && sudo apt upgrade -y
-
-# Install Docker
-sudo apt install -y docker.io
-sudo systemctl start docker
-sudo systemctl enable docker
-
-# Add user to the Docker group
-sudo usermod -aG docker ubuntu  
-
-# Install Docker Compose
-sudo apt install -y docker-compose
-
-# Install Git
-sudo apt install -y git
-
-# Clone the WordPress repository
-sudo git clone https://github.com/shiva270597/wordpress.git /home/ubuntu/wordpress
-
-# Set up Docker Compose for WordPress
-cd /home/ubuntu/wordpress
-sudo docker-compose up -d
+sudo apt-get update -y
+sudo apt-get full-upgrade -y
+sudo apt install python3-pip -y
+sudo git clone https://github.com/shiva270597/flask-library-app.git
+cd flask-library-app
+pip3 install -r requirements.txt
+nohup python3 app.py &
