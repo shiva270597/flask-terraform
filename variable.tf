@@ -15,7 +15,7 @@ variable "ami_id" {
 }
 
 variable "key_name" {
-  description = "The name of the key pair to use for SSH access"
+  description = "The name of the key_pair to use for SSH access"
   default     = "project3"
 }
 
