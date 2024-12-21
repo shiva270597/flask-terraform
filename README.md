@@ -1,2 +1,2 @@
-f;lask-terraform
-terraform file for pyton
+flask-terraform
+terraform file for python
