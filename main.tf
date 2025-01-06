@@ -77,6 +77,7 @@ resource "aws_security_group" "web_sg" {
 resource "aws_instance" "web_server2" {
   ami           = var.ami_id
   instance_type = var.instance_type
+  availability_zone = "ap-south-1a"
   subnet_id     = aws_subnet.main_subnet.id
   key_name      = var.key_name
 
